@@ -1,0 +1,11 @@
+<h1>Cardápio</h1>
+<ul>
+  <li *ngFor="let hamburger of hamburgers">
+    <!-- <img [src]="hamburger.url_foto" alt="Hamburger"> -->
+    <h2>{{ hamburger.nome }}</h2>
+    <p>Preço: R$ {{ hamburger.valor }}</p>
+    <p>Ingredientes: {{ hamburger.ingredientes }}</p>
+    <p>Curtidas: {{ hamburger.curtidas }}</p>
+    <button (click)="likeHamburger(hamburger._id)">Curtir</button>
+  </li>
+</ul>
